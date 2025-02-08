@@ -2,13 +2,32 @@
 <head>
   <title>LIFE AFTER CULT+</title>
 <script>
-    var d1 = new Date(); 
-    var d2 = new Date("2018/02/08");
-    var diff = Math.abs(d1-d2);
-    console.log(diff)
+    showDiff();
+
+function showDiff(){
+    var date1 = new Date();    
+    var date2 = new Date("2018/02/08 00:00:00");
+    
+    var diff = (date2 - date1)/1000;
+    var diff = Math.abs(Math.floor(diff));
+    
+    var days = (Math.floor(diff/(24*60*60)));
+    var leftSec = diff - days * 24*60*60;
+    
+    var hrs = Math.floor(leftSec/(60*60));
+    var leftSec = leftSec - hrs * 60*60;
+      
+    var min = Math.floor(leftSec/(60));
+    var leftSec = leftSec - min * 60;
+
+    document.getElementById("showTime").innerHTML = "Фу-Фу-Фу!" + (days/365) + " лет " + hrs + " часов " + min + " минут и " + leftSec + " секунд.";
+    
+setTimeout(showDiff,1000);
+}
 </script>
 </head>
 <body>
+  <div id="showTime"></div><br>
   POWERED BY mirtaksyak02
 </body>
 </html>
