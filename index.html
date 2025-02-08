@@ -5,16 +5,16 @@
 <body>
   <div id="showTime"></div><br>
   <script>
-    function showDiff(date0){
+    function showDiff(date0, type, name){
       var date1 = new Date();
       var date2 = new Date(date0);
       var difference = Math.abs(Math.floor(((((date1 - date2)/1000)/(24*60*60)/365))));
-      document.getElementById("showTime").innerHTML = difference + " лет треку Фу-Фу-Фу!";
+      document.getElementById("showTime").innerHTML = difference + " лет " + type + " " + name";
       return date0;
       setTimeout(showDiff,1000);
 }
 </script>
-  <script>showDiff('2018/02/08 00:00:00');</script>
+  <script>showDiff('2018/02/08 00:00:00', 'треку', 'Фу-Фу-Фу!');</script>
   POWERED BY mirtaksyak02
 </body>
 </html>
