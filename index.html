@@ -13,7 +13,7 @@
       //return date0, type, name;
       var day = new Date(date0).getDate();
       if (day < 10) day = '0' + day;
-      document.write(difference + " лет " + type + " " + name + " " + day + "." + (new Date(date0).getMonth()+1) + "." + new Date().getFullYear() + " ()<br>");
+      document.write(difference + " лет " + type + " " + name + " (" + day + "." + (new Date(date0).getMonth()+1) + "." + new Date().getFullYear() + ")<br>");
       //setTimeout(showDiff,1000);
 }
 </script>
