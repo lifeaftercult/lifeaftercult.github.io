@@ -9,7 +9,7 @@
       var date1 = new Date();
       var date2 = new Date(date0);
       var difference = Math.abs(Math.floor(((((date1 - date2)/1000)/(24*60*60)/365))));
-      document.getElementById("showTime").innerHTML = difference + " лет " + type + " " + name";
+      document.getElementById("showTime").innerHTML = difference + " лет " + type + " " + name;
       //return date0, type, name;
       setTimeout(showDiff,1000);
 }
