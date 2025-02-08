@@ -10,27 +10,8 @@
 function showDiff(){
     var day1 = new Date();
     var day2 = new Date('2018/02/08 00:00:00');
-    //var difference = day1.getTime() - day2.getTime();
     var difference = Math.abs(Math.floor(((((day1 - day2)/1000)/(24*60*60)/365))));
-    //document.write(difference);
-    document.getElementById("showTime").innerHTML = difference;
-    //var date1 = new Date();
-    //var date2 = new Date("2018/02/08 00:00:00");
-    
-    //var diff = (date2 - date1)/1000;
-    //var diff = Math.abs(Math.floor(diff));
-    
-    //var days = (Math.floor(diff/(24*60*60)));
-    //var leftSec = diff - days * 24*60*60;
-    
-    //var hrs = Math.floor(leftSec/(60*60));
-    //var leftSec = leftSec - hrs * 60*60;
-      
-    //var min = Math.floor(leftSec/(60));
-    //var leftSec = leftSec - min * 60;
-
-    //document.getElementById("showTime").innerHTML = "Фу-Фу-Фу!" + (days/365) + " лет " + hrs + " часов " + min + " минут и " + leftSec + " секунд.";
-    
+    document.getElementById("showTime").innerHTML = difference + "лет треку Фу-Фу-Фу!";
 setTimeout(showDiff,1000);
 }
 </script>
