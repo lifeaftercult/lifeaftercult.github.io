@@ -11,7 +11,7 @@ function showDiff(){
     var day1 = new Date();
     var day2 = new Date('2018/02/08 00:00:00');
     //var difference = day1.getTime() - day2.getTime();
-    var difference = Math.abs(Math.floor(((day1 - day2)/1000)));
+    var difference = Math.abs(Math.floor(((((day1 - day2)/1000)/(24*60*60)/365))));
     //document.write(difference);
     document.getElementById("showTime").innerHTML = difference;
     //var date1 = new Date();
