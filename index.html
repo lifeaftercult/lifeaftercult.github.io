@@ -11,7 +11,9 @@
       var difference = Math.abs(Math.floor(((((date1 - date2)/1000)/(24*60*60)/365))));
       //document.getElementById("showTime").innerHTML = difference + " лет " + type + " " + name;
       //return date0, type, name;
-      document.write(difference + " лет " + type + " " + name + " " + (date1 - date2) + new Date(date0).getDate() + "." + new Date(date0).getMonth() + "." + new Date().getFullYear() + " ()<br>");
+      var day = new Date(date0).getDate();
+      if (day < 10) day = '0' + day;
+      document.write(difference + " лет " + type + " " + name + " " + day + "." + (new Date(date0).getMonth()+1) + "." + new Date().getFullYear() + " ()<br>");
       //setTimeout(showDiff,1000);
 }
 </script>
